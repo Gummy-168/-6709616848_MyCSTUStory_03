@@ -9,12 +9,21 @@ body {
     margin: 0 auto;
 }
 
-.img {
-    width: 30%;
-    padding: 0;
-    height: auto;
-    display: block;
+.container {
+    align-items: center;
     margin: 0;
+    padding: 10px;
+}
+
+.img {
+    width: 35vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    left: 0;
 }
 
 nav {
@@ -26,9 +35,9 @@ nav {
 
 .text {
     color: #000000;
-    margin-left: 30%;
-    text-align: center;
+    margin-left: 0;
     justify-content: center;
+    margin: 20%;
     display: flex;
     flex-direction: column;
 }
@@ -37,27 +46,74 @@ nav {
     color: #ffffff;
     font-size: 2rem;
     text-decoration: none;
-    margin: 40px 0;
+    margin: 50px 0;
     display: block;
     transition: 0.3s ease;
 }
 
 .text a:hover {
-    transform: 1.5s;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: rgba(64, 226, 255, 0.813);
 }
 
-.hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translate(-100%);
-    transition: all 2s;
+@media screen and (max-width: 1112px) {
+    .container {
+        align-items: center;
+        padding: 10px;
+    }
 
+    .text {
+        margin: 20%;
+    }
+
+    .text a {
+        font-size: 2rem;
+        margin: 30px 0;
+    }
+
+    .text a:hover {
+        font-size: 2.5rem;
+    }
 }
 
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
+/*Tablet */
+@media screen and (max-width: 768px) {
+    .container {
+        align-items: center;
+        padding: 10px;
+    }
+
+
+    .text a {
+        font-size: 1.2rem;
+        margin-top: 100px;
+    }
+
+    .text a:hover {
+        font-size: 1.5rem;
+    }
+}
+
+/*Mobile */
+@media screen and (max-width: 360px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+
+    .img {
+        width: 40%;
+
+    }
+
+
+    .text a {
+        font-size: 1rem;
+        margin-left: 20px;
+    }
+
+    .text a:hover {
+        font-size: 1.2rem;
+    }
 }
